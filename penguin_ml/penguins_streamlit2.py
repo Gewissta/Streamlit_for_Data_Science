@@ -9,15 +9,15 @@ rf_pickle.close()
 map_pickle.close()
 
 island = st.selectbox(
-    'Остров проживания пингвинов', 
-    options=['Biscoe', 'Dream', 'Torgerson'])
+    "Остров проживания пингвинов", 
+    options=["Biscoe", "Dream", "Torgerson"])
 sex = st.selectbox(
-    'Пол', options=['Женская особь', 'Мужская особь'])
-bill_length = st.number_input('Длина клюва (мм)', min_value=0)
-bill_depth = st.number_input('Высота клюва (мм)', min_value=0)
-flipper_length = st.number_input('Длина ласт (мм)', min_value=0)
-body_mass = st.number_input('Масса тела (г)', min_value=0)
+    "Пол", options=["Женская особь", "Мужская особь"])
+bill_length = st.number_input("Длина клюва (мм)", min_value=0)
+bill_depth = st.number_input("Высота клюва (мм)", min_value=0)
+flipper_length = st.number_input("Длина ласт (мм)", min_value=0)
+body_mass = st.number_input("Масса тела (г)", min_value=0)
 
-st.write('пользовательские вводы {}'.format(
+st.write("пользовательские вводы {}".format(
     [island, sex, bill_length,
      bill_depth, flipper_length, body_mass]))
