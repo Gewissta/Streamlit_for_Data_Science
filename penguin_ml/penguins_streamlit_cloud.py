@@ -12,6 +12,10 @@ st.write("Это приложение использует 6 признаков 
          "Пингвины Палмера. Используйте для заполнения "
          "форму ниже!")
 
+password_guess = st.text_input("Введите пароль")
+if password_guess != 'streamlit_password':
+    st.stop()
+
 penguin_df = pd.read_csv('penguins.csv')
 rf_pickle = open('random_forest_penguin.pickle', 'rb')
 map_pickle = open('output_penguin.pickle', 'rb')
