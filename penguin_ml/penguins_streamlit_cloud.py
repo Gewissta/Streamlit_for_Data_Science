@@ -13,7 +13,7 @@ st.write("Это приложение использует 6 признаков 
          "форму ниже!")
 
 password_guess = st.text_input("Введите пароль")
-if password_guess != 'streamlit_password':
+if password_guess != st.secrets["password"]:
     st.stop()
 
 penguin_df = pd.read_csv('penguins.csv')
