@@ -6,4 +6,10 @@ st.write('Это приложение анализирует деревья в �
          'на основе набора данных, любезно предоставленного '
          'Департаментом общественных работ в Сан-Франциско')
 trees_df = pd.read_csv('trees.csv')
-st.write(trees_df.head())
+
+df_dbh_grouped = pd.DataFrame(
+    trees_df.groupby(['dbh']).count()['tree_id'])
+df_dbh_grouped.columns = ['количество деревьев']
+st.line_chart(df_dbh_grouped)
+st.bar_chart(df_dbh_grouped)
+st.area_chart(df_dbh_grouped)
