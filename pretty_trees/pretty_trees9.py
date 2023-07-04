@@ -24,7 +24,7 @@ df_dbh_grouped = pd.DataFrame(trees_df.groupby(['dbh']).count()
 df_dbh_grouped.columns = ['tree_count']
 
 # задаем несколько колонок, добавляем два графика
-col1, col2 = st.beta_columns(2)
+col1, col2 = st.columns(2)
 
 with col1:
     st.write('Распределение деревьев по диаметру на высоте груди')

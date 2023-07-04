@@ -12,7 +12,7 @@ st.markdown("Используем это приложение Streamlit, что�
 penguin_file = st.file_uploader(
     "Загрузите ваш CSV-файл с данными о пингвинах")
 
-@st.cache()
+@st.cache_data
 def load_file(penguin_file):
     time.sleep(3)
     if penguin_file is not None:

@@ -10,7 +10,7 @@ trees_df = pd.read_csv('trees.csv')
 df_dbh_grouped = pd.DataFrame(trees_df.groupby(['dbh']).count()
                               ['tree_id'])
 df_dbh_grouped.columns = ['tree_count']
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.line_chart(df_dbh_grouped)

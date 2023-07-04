@@ -14,7 +14,7 @@ second_width = st.number_input('Ширина второй колонки',
 third_width = st.number_input('Ширина третьей колонки', 
                               min_value=1, value=1)
 
-col1, col2, col3 = st.beta_columns(
+col1, col2, col3 = st.columns(
     (first_width, second_width, third_width))
 
 with col1:
