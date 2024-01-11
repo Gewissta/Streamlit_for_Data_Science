@@ -35,7 +35,7 @@ else:
     output, unique_penguin_mapping = pd.factorize(output)
     x_train, x_test, y_train, y_test = train_test_split(
         features, output, test_size=0.8)
-    rfc = RandomForestClassifier(random_state=15)
+    rfc = RandomForestClassifier(random_state=15, n_estimators=1000)
     rfc.fit(x_train, y_train)
     y_pred = rfc.predict(x_test)
     score = round(accuracy_score(y_pred, y_test), 2)
